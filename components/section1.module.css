@@ -1,0 +1,119 @@
+.about,
+.williamsExcavation {
+  position: relative;
+  display: inline-block;
+}
+.about {
+  text-decoration: none;
+  letter-spacing: 0.3em;
+  line-height: 24px;
+  color: inherit;
+  min-width: 75px;
+}
+.williamsExcavation {
+  margin: 0;
+  font-size: var(--font-size-25xl);
+  line-height: 60px;
+  max-width: 100%;
+  font-family: var(--heading-1);
+}
+.title {
+  width: 611px;
+  background-color: var(--dark-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-xl) var(--padding-base)
+    var(--padding-45xl);
+  box-sizing: border-box;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.equippedWithCuttingEdge {
+  flex: 1;
+  position: relative;
+  letter-spacing: -0.02em;
+  display: inline-block;
+  max-width: 100%;
+}
+.text {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 335px;
+  max-width: 100%;
+}
+.ornamentIcon {
+  height: 436px;
+  width: 525px;
+  object-fit: cover;
+  max-width: 100%;
+}
+.section4,
+.techDescription,
+.technology {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+.techDescription {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 0 var(--padding-19xl);
+  box-sizing: border-box;
+  gap: var(--gap-89xl);
+}
+.section4,
+.technology {
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: justify;
+  font-size: var(--font-size-xl);
+  color: var(--color-gray-100);
+  font-family: var(--font-work-sans);
+}
+.section4 {
+  background-color: var(--white);
+  overflow: hidden;
+  align-items: flex-start;
+  padding: 0 var(--padding-21xl);
+  box-sizing: border-box;
+  flex-shrink: 0;
+  text-align: left;
+  font-size: var(--body-body-2-30-space-size);
+  color: var(--white);
+  font-family: var(--body-body-2-30-space);
+}
+@media screen and (max-width: 1050px) {
+  .williamsExcavation {
+    font-size: var(--font-size-16xl);
+    line-height: 48px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .title {
+    padding-left: var(--padding-13xl);
+    box-sizing: border-box;
+  }
+  .techDescription {
+    gap: var(--gap-35xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .williamsExcavation {
+    font-size: var(--font-size-7xl);
+    line-height: 36px;
+  }
+  .equippedWithCuttingEdge {
+    font-size: var(--body-body-2-30-space-size);
+  }
+  .techDescription {
+    gap: var(--gap-8xl);
+  }
+}

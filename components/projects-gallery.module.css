@@ -1,0 +1,183 @@
+.projectGallery {
+  margin: 0;
+  width: 500px;
+  height: 83px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding-left: var(--padding-xl);
+  padding-right: var(--padding-xl);
+}
+.williamsExcavation03Icon,
+.williamsExcavation07Icon {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+.williamsExcavation07Icon {
+  height: 445.4px;
+  flex-shrink: 0;
+}
+.williamsExcavation03Icon {
+  flex: 1;
+  max-height: 100%;
+}
+.imageItems {
+  height: 960.8px;
+  width: 625px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 var(--padding-xl) var(--padding-12xs-1);
+  box-sizing: border-box;
+  gap: var(--gap-3xs);
+  max-width: 100%;
+}
+.williamsexcavation14Icon {
+  height: 960.8px;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+.singleImage {
+  width: 509px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 var(--padding-xl);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.williamsExcavation03Icon1 {
+  align-self: stretch;
+  height: 465.9px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.imageItems1,
+.imagePair {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  gap: var(--gap-3xs);
+  max-width: 100%;
+}
+.imageItems1 {
+  height: 960.8px;
+  width: 388px;
+  flex-direction: column;
+  padding: 0 var(--padding-xl) var(--padding-12xs-1);
+}
+.imagePair {
+  align-self: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 0 var(--padding-6xs);
+  flex-shrink: 0;
+}
+.williamsExcavation01Icon {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+  min-width: 139px;
+  min-height: 466px;
+}
+.imagePair1 {
+  width: 747px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 0 var(--padding-xl);
+  box-sizing: border-box;
+  gap: 10px 8px;
+  max-width: 100%;
+}
+.williamsExcavation08Icon {
+  align-self: stretch;
+  width: 710px;
+  position: relative;
+  max-height: 100%;
+  object-fit: cover;
+  min-height: 466px;
+  max-width: 100%;
+}
+.imageRow1 {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 0 var(--padding-7xs);
+  box-sizing: border-box;
+  gap: 10px 8px;
+  flex-shrink: 0;
+}
+.imageGrid,
+.imageRow,
+.imageRow1,
+.projectsGallery {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+.imageRow {
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-12xs-1);
+  box-sizing: border-box;
+  gap: var(--gap-3xs);
+}
+.imageGrid,
+.projectsGallery {
+  align-self: stretch;
+  justify-content: center;
+}
+.imageGrid {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.projectsGallery {
+  background-color: var(--white);
+  overflow: hidden;
+  flex-direction: column;
+  gap: var(--gap-3xs);
+  flex-shrink: 0;
+  text-align: left;
+  font-size: var(--font-size-45xl);
+  color: var(--color-black);
+  font-family: var(--heading-1);
+}
+@media screen and (max-width: 1050px) {
+  .projectGallery {
+    font-size: var(--font-size-32xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .projectGallery {
+    font-size: var(--font-size-19xl);
+  }
+}

@@ -1,0 +1,136 @@
+.williams20logo3transparentIcon {
+  height: 50.7px;
+  width: 50.7px;
+  position: relative;
+  object-fit: cover;
+}
+.byWilliamsExcavation {
+  position: relative;
+  line-height: 32px;
+  white-space: nowrap;
+}
+.williams20logo3transparentParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+  top: 0;
+  z-index: 99;
+  position: sticky;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  font-family: var(--body-body-2-30-space);
+}
+.ornamentIcon {
+  height: 559px;
+  width: 525px;
+  object-fit: cover;
+  max-width: 100%;
+}
+.welcomeTo {
+  margin: 0;
+}
+.welcomeToWilliamsContainer {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: inherit;
+  line-height: 60px;
+  font-weight: 700;
+  font-family: inherit;
+}
+.atWilliamsExcavation {
+  align-self: stretch;
+  position: relative;
+  line-height: 26px;
+}
+.text,
+.welcomeToWilliamsExcavationParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.text {
+  align-self: stretch;
+  text-align: justify;
+  font-size: var(--font-size-base-8);
+  color: var(--color-gray-100);
+  font-family: var(--body-body-2-30-space);
+}
+.welcomeToWilliamsExcavationParent {
+  flex: 1;
+  gap: var(--gap-18xl);
+  min-width: 335px;
+  max-width: 100%;
+}
+.intro,
+.ornamentParent,
+.section2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+.ornamentParent {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 108px 106px;
+}
+.intro,
+.section2 {
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.intro {
+  width: 1360px;
+  justify-content: center;
+}
+.section2 {
+  align-self: stretch;
+  background-color: var(--white);
+  justify-content: flex-end;
+  padding: var(--padding-xl) var(--padding-21xl);
+  box-sizing: border-box;
+  min-height: 650px;
+  flex-shrink: 0;
+  text-align: left;
+  font-size: var(--font-size-45xl);
+  color: var(--dark-blue);
+  font-family: var(--heading-1);
+}
+@media screen and (max-width: 1050px) {
+  .welcomeToWilliamsContainer {
+    font-size: var(--font-size-32xl);
+    line-height: 48px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .welcomeToWilliamsExcavationParent {
+    gap: var(--gap-lg);
+  }
+  .ornamentParent {
+    gap: var(--gap-34xl);
+  }
+  .section2 {
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .byWilliamsExcavation {
+    display: none;
+  }
+  .welcomeToWilliamsContainer {
+    font-size: var(--font-size-19xl);
+    line-height: 36px;
+  }
+  .ornamentParent {
+    gap: var(--gap-7xl);
+  }
+}
