@@ -8,6 +8,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Fragment>
       <Head>
         <title>Excavation</title>
+        <meta name="description" content="Excavation" />
+        <link rel="icon" href="williams20logo3transparent20bgroundpng@2x.png" />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
