@@ -9,14 +9,14 @@ const Section: NextPage<SectionType> = ({ className = "" }) => {
     <section
       className={`self-stretch bg-white flex flex-row items-start justify-end flex-wrap content-start py-5 px-10 box-border min-h-[650px] max-w-full shrink-0 text-left text-45xl text-dark-blue font-heading-1 mq750:pb-5 mq750:box-border ${className}`}
     >
-      <header className="self-stretch flex flex-col items-center justify-start max-w-full text-justify text-xl text-black font-work-sans">
+      <header className="self-stretch flex flex-row items-center justify-start max-w-full text-justify text-xl text-black font-work-sans">
         <img
           className="h-[50.7px] w-[50.7px] relative object-cover"
           loading="lazy"
           alt=""
           src="/williams20logo3transparent20bgroundpng@2x.png"
         />
-        <b className="relative leading-[32px] whitespace-nowrap mq450:hidden">{`by Williams Excavation & Aggregate`}</b>
+        <b className="relative leading-[32px] whitespace-nowrap mq450:hidden">{`by Williams Solutions.Pro`}</b>
       </header>
       <div className="w-[1360px] flex flex-row items-start justify-center flex-wrap content-start max-w-full">
         <div className="flex-1 flex flex-row items-center justify-center flex-wrap content-center gap-x-[108px] gap-y-[106px] max-w-full mq450:gap-[26px] mq750:gap-[53px]">
