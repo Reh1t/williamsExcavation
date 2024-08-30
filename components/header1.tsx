@@ -33,10 +33,6 @@ const Header1: NextPage<Header1Type> = ({
     router.push("https://williamssolutionpro.vercel.app/");
   }, [router]);
 
-  const onHomeClick = useCallback(() => {
-    router.push("/");
-  }, [router]);
-
   const onplumbingClick = useCallback(() => {
     router.push("https://williams-plumbing-solutions.vercel.app/");
   }, [router]);
@@ -63,11 +59,17 @@ const Header1: NextPage<Header1Type> = ({
   }, []);
 
   const onWaterTextClick = useCallback(() => {
-    router.push("https://williams-plumbing-solutions.vercel.app/water-treatment");
+    router.push(
+      "https://williams-plumbing-solutions.vercel.app/water-treatment"
+    );
   }, [router]);
 
   const onContactButtonClick = useCallback(() => {
     router.push("https://getjobber.com/");
+  }, [router]);
+
+  const onBlogClick = useCallback(() => {
+    router.push("https://blog-delta-three-74.vercel.app/");
   }, [router]);
 
   const onWilliamsButtonClick = useCallback(() => {
@@ -81,7 +83,6 @@ const Header1: NextPage<Header1Type> = ({
   const onLoggingButtonClick = useCallback(() => {
     router.push("https://williamslogging.vercel.app/");
   }, [router]);
-
 
   const [isOpen, setIsOpen] = useState(false);
   let closeTimeout: NodeJS.Timeout;
@@ -111,7 +112,10 @@ const Header1: NextPage<Header1Type> = ({
             src="/williams20logo3transparent20bgroundpng@2x.png"
             onClick={onSolutionClick}
           />
-          <b className="relative leading-[32px] mq450:text-base mq450:leading-[26px] cursor-pointer" onClick={onSolutionClick}>
+          <b
+            className="relative leading-[32px] mq450:text-base mq450:leading-[26px] cursor-pointer"
+            onClick={onSolutionClick}
+          >
             Williams Solutions.Pro
           </b>
         </div>
@@ -121,14 +125,6 @@ const Header1: NextPage<Header1Type> = ({
             isOpen ? "lg:block" : "lg:hidden"
           } lg:block`}
         >
-          <div
-            className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer"
-            onClick={onHomeClick}
-          >
-            <a className="relative leading-[26px] text-[inherit] inline-block">
-              Home
-            </a>
-          </div>
           <div
             className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer"
             onClick={onTAGHdLinkNormalContainerClick}
@@ -161,7 +157,11 @@ const Header1: NextPage<Header1Type> = ({
             >
               <a className="relative leading-[26px] text-[inherit] inline-block min-w-[39px]">
                 Williams Services
-                <img className="relative w-3 h-3 ml-3" src="/down-arrow.png" alt="dwon arrrow" />
+                <img
+                  className="relative w-3 h-3 ml-3"
+                  src="/down-arrow.png"
+                  alt="dwon arrrow"
+                />
               </a>
             </div>
             <div
@@ -190,17 +190,26 @@ const Header1: NextPage<Header1Type> = ({
                 >
                   Septic
                 </a>
-                <a className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer" onClick={onExcavationButtonClick}>
+                <a
+                  className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer"
+                  onClick={onExcavationButtonClick}
+                >
                   Excavation
                 </a>
-                <a className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer" onClick={onLoggingButtonClick}>
+                <a
+                  className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer"
+                  onClick={onLoggingButtonClick}
+                >
                   Logging
                 </a>
               </div>
             </div>
           </div>
           <div className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer">
-            <a className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer">
+            <a
+              className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer"
+              onClick={onBlogClick}
+            >
               Blog
             </a>
           </div>

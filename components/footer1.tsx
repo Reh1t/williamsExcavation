@@ -21,10 +21,6 @@ const Footer1: NextPage<Footer1Type> = ({
 }) => {
   const router = useRouter();
 
-  const onHomeClick = useCallback(() => {
-    router.push("/");
-  }, [router]);
-
   const onSocialIconsContainerClick = useCallback(() => {
     window.open("https://ca.linkedin.com/in/williams-plumbing-solution");
   }, []);
@@ -41,20 +37,39 @@ const Footer1: NextPage<Footer1Type> = ({
     window.open("https://www.youtube.com/watch?v=HdwCDhqtFuQ");
   }, []);
 
-  const onServiesTextClick = useCallback(() => {
-    router.push("/services");
-  }, [router]);
-
-  const onProjectsTextClick = useCallback(() => {
-    router.push("/project-gallery");
-  }, [router]);
-
   const onWaterTextClick = useCallback(() => {
-    router.push("/water-treatment");
+    router.push(
+      "https://williams-plumbing-solutions.vercel.app/water-treatment"
+    );
   }, [router]);
 
   const onAboutUsTextClick = useCallback(() => {
-    router.push("/about-us");
+    const anchor = document.querySelector("[data-scroll-to='about']");
+    if (anchor) {
+      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  }, []);
+
+  const onServiesTextClick = useCallback(() => {
+    const anchor = document.querySelector("[data-scroll-to='services']");
+    if (anchor) {
+      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  }, []);
+
+  const onProjectsTextClick = useCallback(() => {
+    const anchor = document.querySelector("[data-scroll-to='projects']");
+    if (anchor) {
+      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  }, []);
+
+  const onBlogClick = useCallback(() => {
+    router.push("https://blog-delta-three-74.vercel.app/");
+  }, [router]);
+
+  const onplumbingClick = useCallback(() => {
+    router.push("https://williams-plumbing-solutions.vercel.app/");
   }, [router]);
 
   const onContactUsTextClick = useCallback(() => {
@@ -131,7 +146,7 @@ const Footer1: NextPage<Footer1Type> = ({
           <div className="self-stretch flex flex-col items-start justify-start gap-[14px] text-darkslategray-100">
             <div
               className="self-stretch relative leading-[150%] font-medium cursor-pointer"
-              onClick={onHomeClick}
+              onClick={onplumbingClick}
             >
               Plumbing Solutions
             </div>
@@ -163,12 +178,6 @@ const Footer1: NextPage<Footer1Type> = ({
         </div>
         <div className="flex flex-col items-start justify-start gap-[14px] min-w-[122px]">
           <div
-            className="flex flex-row items-center justify-center cursor-pointer"
-            onClick={onHomeClick}
-          >
-            Home
-          </div>
-          <div
             className="self-stretch relative leading-[150%] font-medium cursor-pointer"
             onClick={onAboutUsTextClick}
           >
@@ -191,6 +200,12 @@ const Footer1: NextPage<Footer1Type> = ({
             onClick={onContactUsTextClick}
           >
             Contact Us
+          </div>
+          <div
+            className="self-stretch relative leading-[150%] font-medium cursor-pointer"
+            onClick={onBlogClick}
+          >
+            Blog
           </div>
         </div>
       </div>
@@ -221,7 +236,7 @@ const Footer1: NextPage<Footer1Type> = ({
                 Email Us:
               </div>
               <div className="relative leading-[25.6px] font-semibold whitespace-nowrap">
-              info@williamssolutions.pro
+                info@williamssolutions.pro
               </div>
             </div>
           </div>
