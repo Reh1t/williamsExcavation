@@ -85,8 +85,18 @@ const Header1: NextPage<Header1Type> = ({
   }, [router]);
 
   const [isOpen, setIsOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   let closeTimeout: NodeJS.Timeout;
 
+  const handleMenuClick = () => {
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  };
+
+  // Update the `openMenu` and `closeMenu` functions to handle both the hamburger and dropdown menus
   const openMenu = () => {
     clearTimeout(closeTimeout);
     setIsOpen(true);
@@ -95,7 +105,22 @@ const Header1: NextPage<Header1Type> = ({
   const closeMenu = () => {
     closeTimeout = setTimeout(() => {
       setIsOpen(false);
-    }, 200); // Adjust the delay as needed
+    }, 200);
+  };
+  // Add new functions to handle the dropdown menu on small screens
+  const handleDropdownClick = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const openDropdown = () => {
+    clearTimeout(closeTimeout);
+    setIsDropdownOpen(true);
+  };
+
+  const closeDropdown = () => {
+    closeTimeout = setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 200);
   };
 
   return (
@@ -149,27 +174,30 @@ const Header1: NextPage<Header1Type> = ({
               Projects
             </a>
           </div>
-          <div className="relative">
+          <div
+            className="relative"
+            onMouseEnter={!isOpen ? openDropdown : undefined}
+            onMouseLeave={!isOpen ? closeDropdown : undefined}
+          >
             <div
               className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer"
-              onMouseEnter={openMenu}
-              onMouseLeave={closeMenu}
+              onClick={isOpen ? handleDropdownClick : undefined} // Toggle dropdown on click for small screens
             >
               <a className="relative leading-[26px] text-[inherit] inline-block min-w-[39px]">
                 Williams Services
                 <img
                   className="relative w-3 h-3 ml-3"
                   src="/down-arrow.png"
-                  alt="dwon arrrow"
+                  alt="down arrow"
                 />
               </a>
             </div>
             <div
               className={`absolute top-full left-0 bg-white shadow-[0px_8px_16px_rgba(55,_99,_244,_0.15)] rounded-lg z-10 ${
-                isOpen ? "block" : "hidden"
+                isDropdownOpen ? "block" : "hidden"
               }`}
-              onMouseEnter={openMenu}
-              onMouseLeave={closeMenu}
+              onMouseEnter={!isOpen ? openDropdown : undefined}
+              onMouseLeave={!isOpen ? closeDropdown : undefined}
             >
               <div className="flex flex-col items-start justify-start py-2 px-4 gap-[8px]">
                 <a
@@ -224,7 +252,7 @@ const Header1: NextPage<Header1Type> = ({
         </nav>
         <button
           className="hidden lg:block text-black bg-transparent"
-          onClick={openMenu}
+          onClick={handleMenuClick}
         >
           <svg
             className="w-6 h-6"
@@ -244,7 +272,7 @@ const Header1: NextPage<Header1Type> = ({
         </button>
       </div>
       <div className="self-stretch bg-steelblue flex flex-col items-start justify-center py-2.5 px-[61px] box-border max-w-full text-29xl font-ledger mq1400:pl-[30px] mq1400:pr-[30px] mq1400:box-border">
-        <div className="w-[1280px] flex flex-row items-center justify-between max-w-full gap-[20px] mq450:gap-0 mq450::flex-wrap">
+        <div className="w-[1280px] flex flex-row items-center justify-between max-w-full gap-[20px] mq450::flex-wrap">
           <div className="w-[543px] ml-10  flex flex-row items-center justify-start gap-[86px] max-w-full mq450:ml-0 mq825:gap-[43px] mq450:gap-[21px]">
             <img
               className="h-32 w-36 mq675:h-14 mq675:w-16 relative object-cover"
@@ -252,11 +280,11 @@ const Header1: NextPage<Header1Type> = ({
               alt=""
               src="/tag-hd-logo@2x.png"
             />
-            <h1 className="m-0 flex-1 relative text-[100px] tracking-[-0.1em] leading-[53px] font-normal font-ledger inline-block min-w-[213px] max-w-full lg:text-53xl mq1050:text-32xl mq825:text-19xl mq825:leading-[42px] mq450:text-10xl mq450:leading-[32px]">
+            <h1 className="m-0 flex-1 relative text-[100px] tracking-[-0.1em] leading-[53px] font-normal font-ledger inline-block max-w-full lg:text-53xl mq1050:text-32xl mq825:text-19xl mq825:leading-[42px] mq450:text-10xl mq450:leading-[32px]">
               WILLIAMS
             </h1>
           </div>
-          <div className="w-auto mr-10 flex flex-col items-start justify-start text-32xl font-normal font-ledger mq1050:text-19xl mq825:text-7xl">
+          <div className="flex flex-col items-start justify-start text-32xl font-normal font-ledger mq1050:text-19xl mq825:text-7xl">
             <h1 className="m-0 self-stretch relative text-inherit leading-[110%] font-normal font-inherit  mq825:leading-[28px] mq450:text-lgi mq450:leading-[21px]">
               {name1}
             </h1>
