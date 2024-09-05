@@ -17,8 +17,8 @@ const Header1: NextPage<Header1Type> = ({
   className = "",
   navHEADERAlignSelf,
   navHEADERFlex,
-  name1 = "Excavation",
-  name2 = "& Aggregate",
+  name1 = "Aggregates",
+  name2 = "& Construction",
 }) => {
   const tAGHeaderStyle: CSSProperties = useMemo(() => {
     return {
